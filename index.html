@@ -26,11 +26,11 @@
         let imgTag = "";
 
         if (hour >= 6 && hour < 12) {
-            imgTag = '<img src="sunrise-image.jpg" alt="Morning" width="150" height="150">';
+            imgTag = '<img src="sunrise-image.jpg" alt="Morning" width="350" height="350">';
         } else if (hour >= 12 && hour < 18) {
-            imgTag = '<img src="daytime-image.webp" alt="Day" width="150" height="150">';
+            imgTag = '<img src="daytime-image.webp" alt="Day" width="350" height="350">';
         } else if (hour >= 18 && hour < 21) {
-            imgTag = '<img src="night-image.jpeg" alt="Evening" width="150" height="150">';
+            imgTag = '<img src="night-image.jpeg" alt="Evening" width="350" height="350">';
         }
 
         imgDiv.innerHTML = imgTag;

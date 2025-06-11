@@ -8,6 +8,7 @@
             font-family: Arial, sans-serif;
             color: white;
             padding: 20px;
+            background-color: #333;
         }
     </style>
 </head>
@@ -15,19 +16,24 @@
     <h1>Charles Curtis</h1>
     <h2>COP 4813 Introduction to Web Development</h2>
     <h3>Computer Science</h3>
-    <p>Welcome to my timed-based display webpage!</p>
+    <p>Welcome to my time-based display webpage!</p>
+
+    <div id="timeImage"></div>
 
     <script>
         const hour = new Date().getHours();
+        const imgDiv = document.getElementById("timeImage");
+        let imgTag = "";
 
         if (hour >= 6 && hour < 12) {
-            <img src= ![Alt morning](main/sunrise-image.jpg) width="150" height="150">
+            imgTag = '<img src="main/sunrise-image.jpg" alt="Morning" width="150" height="150">';
         } else if (hour >= 12 && hour < 18) {
-            <img src= ![Alt day](main/daytime-image.webp) width="150" height="150">    
+            imgTag = '<img src="main/daytime-image.webp" alt="Day" width="150" height="150">';
         } else if (hour >= 18 && hour < 21) {
-            <img src= ![Alt night](main/night-image.jpeg) width="150" height="150">   
+            imgTag = '<img src="main/night-image.jpeg" alt="Evening" width="150" height="150">';
         }
 
+        imgDiv.innerHTML = imgTag;
     </script>
 </body>
 </html>
